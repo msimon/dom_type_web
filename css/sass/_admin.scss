@@ -1,0 +1,78 @@
+.admin {
+  .header {
+    a { cursor: pointer }
+  }
+
+  p.error {
+    color: #BB0000;
+    margin-bottom: 10px;
+    font-size:15px;
+  }
+
+
+  .global_container {
+    width:1000px;
+    margin: 10px auto 25px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 25px 0 35px 0;
+  }
+
+  div.connected {
+    > div.dump_btn_container {
+      text-align: center ;
+
+      > span {
+        margin-left: 5px;
+        font-size: 15px;
+        color: #888;
+      }
+    }
+
+    > div.games_list {
+      ul > li {
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 5px;
+
+        > div.edit {
+          padding: 10px 0;
+          border: 1px solid #ddd;
+          border-top: none;
+
+          > div.game_button_action {
+            margin-top: 10px;
+
+            .button-cancel, .button-delete {
+              float:left ;
+              margin-left: 20px;
+            }
+            .button-save {
+              float:right ;
+              margin-right: 20px;
+            }
+          }
+
+          @include game_record;
+        }
+      }
+
+      > div.new_game_div {
+        width: 939px;
+        margin-left: 21px;
+      }
+    }
+  }
+
+  div.not_connected {
+    width: 220px;
+    margin: 0 auto;
+
+    button {
+      float: right ;
+    }
+  }
+}
