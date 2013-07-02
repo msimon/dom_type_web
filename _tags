@@ -1,4 +1,5 @@
-<src/server/*.{ml,mli}>: thread, syntax(camlp4o), package(eliom.server,eliom.syntax.server,deriving-ocsigen,deriving-ocsigen.syntax)
-<src/client/*.{ml,mli}>: thread, syntax(camlp4o), package(eliom.client,eliom.syntax.client)
+<src/server/*.{ml,mli}>: thread, syntax(camlp4o), package(eliom.server,eliom.syntax.server,deriving-ocsigen,deriving-ocsigen.syntax,lwt.syntax,dom_type.server.syntax)
+<src/client/*.{ml,mli}>: thread, syntax(camlp4o), package(eliom.client,eliom.syntax.client, lwt.syntax, dom_type.client, dom_type.client.syntax)
 
-<src/type_mli/*.{ml,mli}>: thread, syntax(camlp4o), package(eliom.server,eliom.syntax.type)
+<src/type_mli/*.{ml,mli}>: thread, syntax(camlp4o), package(eliom.server, eliom.syntax.type,lwt.syntax, dom_type.server.syntax)
+<dom_typ.js>: js_compile

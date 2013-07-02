@@ -190,7 +190,7 @@ let ocaml_depend ml env build =
   let filename = try Filename.basename (Filename.chop_extension ml) with _ -> ml in
   let tags = (tags_of_pathname ml) in
 
-  ignore (build [[ "src/type_mli/"^filename-.-"type_mli" ]]);
+   ignore (build [[ "src/type_mli/"^filename-.-"type_mli" ]]);
 
   let ml_depends = Pathname.update_extensions "ml.depends" ml in
 
@@ -199,7 +199,7 @@ let ocaml_depend ml env build =
 	      @ [Sh ">"; Px ml_depends]))
 
 let _ =
-  rule "ocaml server modified: ml -. depends"
+  rule "ocaml server modified:  ml -. depends"
     ~dep:"src/%(suffix)/%.ml"
     ~prod:"src/%(suffix:<*> and not <*_*>)/%.ml.depends"
     (fun env build -> ocaml_depend ("src/"^ (env "%(suffix)") ^"/%.ml") env build)
@@ -218,6 +218,7 @@ let _ =
       copy_rule_with_header "src/%(name).ml" "src/type_mli/%(name:<*>).ml" ;
 
       flag [ "ocaml"; "infer_interface"; "thread" ] (S [ A "-thread" ]);
+      flag [ "js_compile"] (S [ A "-package" ; A "dom_type.client"] );
       ()
 
     | _ -> ()

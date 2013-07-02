@@ -1,8 +1,8 @@
 .PHONY: all sass clean
 
 all:
-	@ocamlbuild dom_type.otarget
-	@cp _build/dom_type.js public
+	@ocamlbuild dom_typ.otarget
+	@cp _build/dom_typ.js public
 
 sass:
 	@compass compile ./css

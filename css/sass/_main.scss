@@ -23,7 +23,7 @@ body.main {
         > span.logo {
           display: inline-block ;
           float: left ;
-          background: url(img/chip8_logo.svg);
+          background: url(/img/chip8_logo.svg);
           background-size: 180px 180px;
           background-position: -14px -36px;
           width: 150px;
@@ -101,13 +101,22 @@ body.main {
       }
 
       div > div {
-        > p {
+        > p, div.code_block {
           font-family: "Arial", "Liberation Sans", sans-serif;
           font-size: 15px;
 
           text-indent: 10px;
           margin-left: 20px;
           margin-bottom: 5px;
+
+          span.underline {
+            text-decoration: underline
+          }
+        }
+
+        > ul {
+          margin-left: 50px;
+          list-style-type: disc
         }
 
         div.dom_type_example {
