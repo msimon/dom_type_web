@@ -11,7 +11,7 @@ let site_prefix = "/dom_type"
 let html_v cl =
   html ~a:[ a_manifest (uri_of_string (fun () -> "./cache.manifest")) ]
     (head
-       (title (pcdata "OChip8")) [
+       (title (pcdata "Dom Type")) [
        meta ~a:([a_charset "utf-8"; a_content "text/html"; a_http_equiv "Content-Type"]) () ;
        meta ~a:([a_name "Description"; a_content "Html representation of ocaml type"]) () ;
        meta ~a:([a_property "og:type"; a_content "website"]) () ;
