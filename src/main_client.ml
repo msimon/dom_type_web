@@ -61,7 +61,7 @@
         p [
           span [
             pcdata "It is aim to easily create and modify ocaml value with a html interface. It is particularly well suit for a backend application.
-(I'm fully using it to generate the backend application of my other project ";
+(I'm using it to fully generate the backend application of my other project ";
           ];
           Raw.a ~a:[ a_href "http://www.ochip8.com"; a_target "_blank" ] [ pcdata "Ochip8" ];
           span [
@@ -187,7 +187,7 @@ Each \"option\" (html element inside the select) represent an enumerated type.
 For variants with non-enumerated type (i.e: | X of int) the necessary input will be display when selected and remove when another value is selected."
         ];
         p [
-          pcdata "Hope this example will clarify how variants work:"
+          pcdata "This example should clarify how variants work:"
         ];
         pre [
           code [
@@ -304,7 +304,8 @@ button ~button_type:`Button ~a:[
         h4 [ pcdata "Record" ];
         div [
           p [
-            span [ pcdata "Record will be generated as key html. I am using it to generate to add and modify games in my other project "];
+            span [ pcdata "Record will be generated as key value reprensation. Each type the record is compose of will be generated as previously.
+I am using it to add and modify games in my other project "];
             Raw.a ~a:[ a_href "http://www.ochip8.com" ; a_target "_blank"] [ pcdata "ochip8" ];
             span [ pcdata "."]
           ];
@@ -343,7 +344,7 @@ Dom_type.node game
           Dom_type.node game
         ];
         p [
-          pcdata "In this case keys are mapping keyboard key with the chip8 interpretor. Thanks to the list variant, several keybord's key can be assign to the same chip8's key.
+          pcdata "In this case keys are mapping keyboard key with the chip8 interpretor. Thanks to the variant list, several keybord's key can be assign to the same chip8's key.
 Also, if a keys is missing from the enumerated variant list, thanks to the `Other variant we are able to map any keyboard's key."
         ]
       ]
