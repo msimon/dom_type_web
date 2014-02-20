@@ -277,7 +277,7 @@ button ~button_type:`Button ~a:[
       Manip.replaceAllChild success_div [] ;
       let _ = Opt_tuple.save o in
       Manip.replaceAllChild success_div [ pcdata \"SAVED\" ] ;
-      false
+      raise Eliom_lib.False
   ) ] [ pcdata \"save\"];
 "
           ]
@@ -292,7 +292,7 @@ button ~button_type:`Button ~a:[
               Manip.replaceAllChild success_div [] ;
               let _ = Opt_tuple.save o in
               Manip.replaceAllChild success_div [ pcdata "SAVED" ] ;
-              false
+              raise Eliom_lib.False
           ) ] [ pcdata "save"];
       ]
     in
